@@ -825,5 +825,96 @@ Modern Data Engineer كامل stack تقريبًا 💪📊
 
 
 
+# Elasticsearch --- Quick Guide
+
+## What is Elasticsearch?
+
+Elasticsearch is a **fast search and analytics engine** designed to work
+with **large volumes of data in near real time**.
+
+Think of it like **Google for your company's internal data** 🔎
+
+Instead of searching the internet, Elasticsearch searches inside:
+
+-   System logs
+-   Databases
+-   User files
+-   Large text datasets
+-   Application data
+-   Sensor / IoT data
+-   AI embeddings
+
+------------------------------------------------------------------------
+
+## Why Elasticsearch is Fast
+
+Traditional SQL databases can be slower when searching inside millions
+of rows.
+
+Elasticsearch performs searches in **milliseconds ⚡** because it uses:
+
+**Apache Lucene**
+
+Lucene is a powerful full‑text search engine library optimized for
+speed.
+
+------------------------------------------------------------------------
+
+## Example
+
+Example logs:
+
+User login success User login failed Server error 500 Payment completed
+
+Search query:
+
+error
+
+Elasticsearch returns results almost instantly.
+
+------------------------------------------------------------------------
+
+## How Elasticsearch Stores Data
+
+Instead of tables like SQL databases, Elasticsearch uses JSON documents.
+
+  SQL Concept   Elasticsearch Equivalent
+  ------------- --------------------------
+  Database      Index
+  Table         Document
+  Row           JSON document
+
+Example document:
+
+``` json
+{
+  "user": "Mohammad",
+  "action": "login",
+  "status": "success"
+}
+```
+
+All data is stored in JSON format.
+
+------------------------------------------------------------------------
+
+## Where Elasticsearch is Used in Companies
+
+Elasticsearch is commonly used with a popular stack called:
+
+## ELK Stack
+
+The ELK Stack includes:
+
+-   **Elasticsearch** → storage and search engine
+-   **Logstash** → data ingestion pipeline
+-   **Kibana** → visualization dashboards
+
+Example workflow:
+
+Logs → Logstash → Elasticsearch → Kibana dashboard 📊
+
+This setup allows companies to monitor errors and system activity in
+real time.
 
 
