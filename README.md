@@ -1364,3 +1364,94 @@ This architecture allows:
 - Fast search
 - Advanced analytics
 
+# الفرق بين Apache Impala و Apache Hive
+
+الفرق بين **Apache Impala** و **Apache Hive** يتعلق أساسًا بـ:
+- سرعة التنفيذ
+- طريقة العمل
+- الاستخدام المناسب لكل واحد داخل بيئة Big Data (Hadoop)
+
+---
+
+# 🔹 أولاً: ما هو Apache Hive؟
+
+**Apache Hive** هو نظام **Data Warehouse** يعمل فوق **Hadoop** ويسمح لك بكتابة استعلامات SQL (تسمى HiveQL) لتحليل البيانات الضخمة.
+
+## مميزاته
+
+- يعمل باستخدام **Batch Processing**
+- مناسب لتحليل البيانات الكبيرة غير المستعجلة
+- يعتمد عادة على:
+  - MapReduce
+  - Tez
+  - Spark
+- ممتاز لعمليات:
+
+### أهم الاستخدامات
+
+- ETL
+- Data Warehousing
+- التقارير الثقيلة (Heavy Reporting)
+
+## 📊 مثال استخدام
+
+تشغيل استعلام يأخذ **عدة دقائق** لتحليل ملايين السجلات.
+
+---
+
+# 🔹 ثانياً: ما هو Apache Impala؟
+
+**Apache Impala** هو محرك **SQL Query Engine** سريع جدًا يعمل مباشرة فوق Hadoop.
+
+## مميزاته
+
+- يدعم **Real-time / Interactive Queries**
+- أسرع بكثير من Hive في القراءة
+- لا يستخدم MapReduce
+- مناسب للتحليل السريع والاستعلامات التفاعلية
+
+## 📊 مثال استخدام
+
+تشغيل نفس الاستعلام خلال **ثوانٍ بدل دقائق**
+
+---
+
+# 🔥 مقارنة مباشرة بين Hive و Impala
+
+| الميزة | Hive | Impala |
+|-------|------|--------|
+| السرعة | أبطأ | أسرع جدًا |
+| نوع المعالجة | Batch Processing | Real-time |
+| يعتمد على MapReduce | نعم | لا |
+| مناسب لـ ETL | ممتاز | أقل |
+| مناسب للتحليل السريع | لا | ممتاز |
+| استخدام الذاكرة | أقل | أعلى |
+| Interactive Queries | ضعيف | قوي جدًا |
+
+---
+
+# 🎯 متى تستخدم كل واحد؟
+
+## استخدم Hive عندما:
+
+- تعمل ETL Jobs
+- تبني Data Warehouse
+- تنفذ Jobs طويلة
+- لا تحتاج نتائج فورية
+
+---
+
+## استخدم Impala عندما:
+
+- تحتاج نتائج بسرعة
+- تعمل Dashboards
+- تعمل Data Exploration سريع
+- تعمل Interactive Analytics
+
+---
+
+# 📌 خلاصة سريعة
+
+Hive = Processing ضخم لكن بطيء  
+Impala = Processing سريع وتحليل مباشر
+
