@@ -2,6 +2,15 @@
 
 # 🧠 Open Fiber – Data Office Mind Map (Allineamento Interno)
 
+
+![arc](Designer.jpg)
+
+
+
+![arc2](Designer1.jpg)
+
+
+
 ## 1. 🎯 Big Picture (الفكرة الكبرى)
 
 تحول الشركة من:
